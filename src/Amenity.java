@@ -2,10 +2,10 @@ public abstract class Amenity {
 
     private String amenityName;
     private boolean amenityAvailability;
-    private float amenityPrice;
+    private double amenityPrice;
     private String amenityDescription;
 
-    public Amenity(String amenityName, boolean amenityAvailability, float amenityPrice, String amenityDescription) {
+    public Amenity(String amenityName, boolean amenityAvailability, double amenityPrice, String amenityDescription) {
         this.amenityName = amenityName;
         this.amenityAvailability = amenityAvailability;
         this.amenityPrice = amenityPrice;
@@ -15,7 +15,7 @@ public abstract class Amenity {
     public Amenity() {
         this.amenityName = "default";
         this.amenityAvailability = false;
-        this.amenityPrice = 0;
+        this.amenityPrice = 0.0;
         this.amenityDescription = "amenityDescription";
     }
 
@@ -35,11 +35,11 @@ public abstract class Amenity {
         this.amenityAvailability = amenityAvailability;
     }
 
-    public float getAmenityPrice() {
+    public double getAmenityPrice() {
         return amenityPrice;
     }
 
-    public void setAmenityPrice(float amenityPrice) {
+    public void setAmenityPrice(double amenityPrice) {
         this.amenityPrice = amenityPrice;
     }
 

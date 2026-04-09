@@ -77,14 +77,5 @@ public abstract class Room {
     }
 
     @Override
-    public String toString() {
-        return "Room{" +
-                "roomName='" + roomName + '\'' +
-                ", roomNum=" + roomNum +
-                ", roomDuration=" + roomDuration +
-                ", roomPrice=" + roomPrice +
-                ", roomReservationStatus=" + roomReservationStatus +
-                ", roomCleaningStatus=" + roomCleaningStatus +
-                '}';
-    }
+    public abstract String toString();
 }
