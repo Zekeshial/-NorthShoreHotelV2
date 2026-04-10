@@ -3,7 +3,7 @@ public class Hiking extends Amenity{
     private String trailType, trailLocation;
     private  int trailDifficulty;
 
-    public Hiking(String amenityName, boolean amenityAvailability, float amenityPrice, String amenityDescription, String trailType, String trailLocation, int trailDifficulty) {
+    public Hiking(String amenityName, boolean amenityAvailability, double amenityPrice, String amenityDescription, String trailType, String trailLocation, int trailDifficulty) {
         super(amenityName, amenityAvailability, amenityPrice, amenityDescription);
         this.trailType = trailType;
         this.trailLocation = trailLocation;

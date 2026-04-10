@@ -1,26 +1,22 @@
 public class Movie extends Amenity{
 
     private String movieName;
-    private float movieLength;
-    private boolean popcorn;
+    private String movieLength;
 
-    public Movie(String amenityName, boolean amenityAvailability, double amenityPrice, String amenityDescription, String movieName, float movieLength, boolean popcorn) {
+    public Movie(String amenityName, boolean amenityAvailability, double amenityPrice, String amenityDescription, String movieName, String movieLength) {
         super(amenityName, amenityAvailability, amenityPrice, amenityDescription);
         this.movieName = movieName;
         this.movieLength = movieLength;
-        this.popcorn = popcorn;
     }
 
-    public Movie(String movieName, float movieLength, boolean popcorn) {
+    public Movie(String movieName, String movieLength) {
         this.movieName = movieName;
         this.movieLength = movieLength;
-        this.popcorn = popcorn;
     }
 
     public Movie() {
         this.movieName = null;
-        this.movieLength = 0;
-        this.popcorn = false;
+        this.movieLength = "0";
     }
 
     public String getMovieName() {
@@ -31,20 +27,12 @@ public class Movie extends Amenity{
         this.movieName = movieName;
     }
 
-    public float getMovieLength() {
+    public String getMovieLength() {
         return movieLength;
     }
 
-    public void setMovieLength(float movieLength) {
+    public void setMovieLength(String movieLength) {
         this.movieLength = movieLength;
-    }
-
-    public boolean isPopcorn() {
-        return popcorn;
-    }
-
-    public void setPopcorn(boolean popcorn) {
-        this.popcorn = popcorn;
     }
 
     @Override
@@ -56,7 +44,6 @@ public class Movie extends Amenity{
                 ", amenityDescription='" + getAmenityDescription() + '\'' +
                 ", movieName='" + movieName + '\'' +
                 ", movieLength=" + movieLength +
-                ", popcorn=" + popcorn +
                 '}';
     }
 }

@@ -1,9 +1,12 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Dinning extends Amenity{
 
     private String dinningType;
     private boolean foodDelivery;
 
-    public Dinning(String amenityName, boolean amenityAvailability, float amenityPrice, String amenityDescription, String dinningType, boolean foodDelivery) {
+    public Dinning(String amenityName, boolean amenityAvailability, double amenityPrice, String amenityDescription, String dinningType, boolean foodDelivery) {
         super(amenityName, amenityAvailability, amenityPrice, amenityDescription);
         this.dinningType = dinningType;
         this.foodDelivery = foodDelivery;
@@ -34,6 +37,19 @@ public class Dinning extends Amenity{
 
     public void setFoodDelivery(boolean foodDelivery) {
         this.foodDelivery = foodDelivery;
+    }
+
+    public void deliveryChoice() {
+
+        if (foodDelivery) {
+            System.out.println("You have already rented gear");
+        } else {
+            foodDelivery = true;
+            BigDecimal price = new BigDecimal(getAmenityPrice()+5);
+            BigDecimal roundedPrice = price.setScale(2, RoundingMode.HALF_UP);
+            double newPrice = roundedPrice.doubleValue();
+            setAmenityPrice(newPrice);
+        }
     }
 
 
